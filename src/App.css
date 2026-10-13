@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #424242;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  min-height: 75px;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #387ed1;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.nav-links a:hover,
+.footer a:hover {
+  color: #387ed1;
+}
+
+.menu-button {
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  color: #424242;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 20px 80px;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  margin: 0 auto 45px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #424242;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #387ed1;
+  color: white;
+  padding: 13px 28px;
+  border-radius: 4px;
+  font-size: 17px;
+  border: none;
+  transition: background 0.2s;
+}
+
+.primary-button:hover {
+  background: #222222;
+}
+
+.trust-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  padding: 65px 8%;
+  background: #fafafa;
+}
+
+.trust-text,
+.trust-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.trust-text h2,
+.products-section h2,
+.pricing-section h2,
+.signup-section h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.trust-text h3 {
+  font-size: 20px;
+  margin: 25px 0 12px;
+}
+
+.trust-text p,
+.products-section > p,
+.pricing-section p,
+.signup-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+.trust-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.products-section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.products-section > p {
+  margin-bottom: 35px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.product-card {
+  padding: 30px 22px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  text-align: left;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 25px #00000010;
+  transform: translateY(-4px);
+}
+
+.product-card h3 {
+  color: #387ed1;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.product-card p {
+  line-height: 1.8;
+  color: #666666;
+}
+
+.pricing-section {
+  padding: 65px 8%;
+  text-align: center;
+  background: #fafafa;
+}
+
+.signup-section {
+  padding: 75px 20px;
+  text-align: center;
+}
+
+.signup-section p {
+  margin-bottom: 28px;
+}
+
+.footer {
+  background: #fafafa;
+  border-top: 1px solid #eeeeee;
+  padding: 45px 8%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 35px;
+}
+
+.footer h3 {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.footer p {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #777777;
+}
+
+.footer > div > a:not(.logo) {
+  display: block;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .menu-button {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 35px 18px 55px;
+  }
+
+  .hero-image img {
+    margin-bottom: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .trust-section {
+    flex-direction: column;
+    padding: 45px 7%;
+    gap: 30px;
+  }
+
+  .trust-text,
+  .trust-image {
+    width: 100%;
+  }
+
+  .products-section {
+    padding: 55px 7%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 35px 7%;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 9px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .trust-text h2,
+  .products-section h2,
+  .pricing-section h2,
+  .signup-section h2 {
+    font-size: 25px;
+  }
+}
